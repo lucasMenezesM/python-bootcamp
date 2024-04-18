@@ -131,5 +131,4 @@ for i in range(1, 14):
 tommy.shape("turtle")
 tommy.color("blue")
 
-# screen.bgcolor("black")
 screen.exitonclick()
