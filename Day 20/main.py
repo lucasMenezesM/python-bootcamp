@@ -27,8 +27,8 @@ game = Game(score=score, screen=screen, snake=snake, food=food)
 
 initial_message = ScoreBoard()
 
-if not game.is_game_on:
-    game.show_initial_message()
+# if not game.is_game_on:
+#     game.show_initial_message()
 
 screen.onkey(game.start_game, "space")
 
