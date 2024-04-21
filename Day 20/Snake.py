@@ -17,6 +17,13 @@ class Snake(Turtle):
         for i in range(0, 3):
             self.add_snake_piece(START_POSITION[i])
 
+    def reset(self):
+        for piece in self.snake_body:
+            piece.goto(1000, 1000)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]
+
     def add_snake_piece(self, position):
         new_turtle = Turtle(shape="square")
         new_turtle.color("white")
@@ -51,5 +58,4 @@ class Snake(Turtle):
             0) if self.head.heading() != 180 else None
 
     def increase(self):
-
         self.add_snake_piece(self.tail.pos())
