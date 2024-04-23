@@ -77,6 +77,14 @@ while game_is_on:
         title=f"U.S. States Game {len(guessed_states)}/{total_states}", prompt="Type the name of the State").title()
 
     if user_guess == "Exit":
+
+        missing_states_dic = {"state": []}
+
+        missing_states_dic["state"] = [
+            state for state in all_states if state not in guessed_states]
+
+        df = pandas.DataFrame(missing_states_dic)
+        df.to_csv("Day 25/Missing_states.csv")
         break
 
     state = states_data[states_data["state"] == user_guess]
@@ -89,22 +97,3 @@ while game_is_on:
             state.x.item(), state.y.item()))
         print(state)
         print("Right answer!")
-
-    # if states_answered == total_states:
-    #     game_is_on = False
-
-
-missing_states = []
-missing_states_dic = {
-    "state": []
-}
-
-for state in all_states:
-    if state not in guessed_states:
-        missing_states_dic["state"].append(state)
-
-df = pandas.DataFrame(missing_states_dic)
-df.to_csv("Day 25/Missing_States.csv")
-
-print(missing_states_dic)
-print(len(missing_states_dic["state"]))
