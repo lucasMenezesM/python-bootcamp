@@ -17,7 +17,5 @@ def generate_password():
     random.shuffle(password)
 
     final_password = "".join(password)
-    # for letter in password:
-    #     final_password+=letter
 
     return final_password
