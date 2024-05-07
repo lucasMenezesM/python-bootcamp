@@ -19,9 +19,9 @@ APP_PASSWORD = config["APP_PASSWORD"]
 
 
 # 5 day forecast with a 3-hour step
-# api.openweathermap.org/data/2.5/forecast?lat=-21.754530&lon-41.324612=&appid=552fa566d9d715f6a793c8612cbf2bf3
+# api.openweathermap.org/data/2.5/forecast?lat=-21.754530&lon-41.324612=&appid=
 
-response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast?lat=-21.754530&lon=-41.324612&appid=552fa566d9d715f6a793c8612cbf2bf3")
+response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast?lat=-21.754530&lon=-41.324612&appid="")
 params = {
     "lat": -1.371860,
     "lon": -48.429700,
