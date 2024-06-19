@@ -13,7 +13,7 @@ from dotenv import dotenv_values
 config = dotenv_values("Day 64/.env")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = ''
 Bootstrap5(app)
 
 database = DataBaseManager(app=app)

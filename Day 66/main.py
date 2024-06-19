@@ -143,7 +143,7 @@ def delete_cafe(cafe_id):
     cafe = db.session.get(Cafe, cafe_id)
     api_key = request.args.get('api_key')
     if cafe:
-        if api_key == "TopSecretApiKey":
+        if api_key == "SomeApiSecretKey":
             db.session.delete(cafe)
             db.session.commit()
             return jsonify(response={"Success": "The cafe was successfully deleted from the database"}), 202
